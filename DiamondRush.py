@@ -5,7 +5,6 @@ import sys
 my_win = 0
 my_loss = 0
 
-#assign card values
 num_values = {'2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8,
         '9': 9, '10': 10, 'J': 10, 'Q': 10, 'K': 10, 'A': 1}
 cards = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
@@ -20,7 +19,6 @@ def main():
             sys.exit()
             no()
             
-        #create and customize tkinter window
         window = tk.Tk()
     
         window.rowconfigure(0, minsize=50, weight=1)
@@ -41,21 +39,16 @@ def main():
     
         window.mainloop()
         
-            #defining deal window
-        def dealwindow(): 
-                
-            
-                #defining deal function
+        def dealwindow():         
+              
                 def deal():   
             
                     global my_win, my_loss
                     y = random.choice(suit)
                     x = random.choice(cards)
                         
-                    #setting card_value to num_values
                     card_value = num_values[x]
 
-                    #setting win/lose criteria
                     if(card_value > 9):
                         my_win += 1
 
@@ -104,8 +97,3 @@ def main():
         
         
 main()
-           
-
-
-
-
